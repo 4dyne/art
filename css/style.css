@@ -97,20 +97,15 @@ a { color: inherit; }
     max-width: 100%;
     max-height: 75vh;
 }
-@media (max-height:600px) {
-    /* make images less tall on short screens */
-    /* .obj-img-display { 
-        max-height: 75vh;
-        width: auto;
-    } */
-}
 
 .obj-flex-full { flex-basis: 100%; }
+
 .obj-flex-comm { flex-basis: 50%; }
 @media (max-width:720px) {
     /* single-column gallery on smaller screens */
     .obj-flex-comm { flex-basis: 100%; }
 }
+
 .obj-flex-gallery { flex-basis: 50%; }
 @media (max-width:960px) {
     /* single-column gallery on smaller screens */
@@ -347,13 +342,3 @@ body {
 /* Hover */
 .hover-none:hover { background-color: transparent !important; }
 .hover-none:hover { box-shadow: none !important; }
-
-
-/* == Unused == */
-.obj-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
-}
-.obj-grid-half { flex-basis: 50%; }
-.obj-grid-third { flex-basis: 33%; }
-.obj-grid-quarter { flex-basis: 25%; }
