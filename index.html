@@ -117,7 +117,7 @@
         <p>
           <span class="text-xlarge text-bold">Colored</span>
           <br/>
-          <span class="text-xlarge">20 $USD</span>
+          <span class="text-xlarge">25 $USD</span>
           <br/>
           <span class="text-medium text-grey">(base price)</span>
         </p>
@@ -128,59 +128,89 @@
       <img class="obj-img-display pad-small" src="./assets/price-estimate-v2_upload.png">
     </div>
 
+    <div class="align-center text-large pad-16">
+
+      <div class="display-inline-block pad-4">
+        <label for="comm-style" class="text-large text-bold">Style</label><br>
+        <select id="comm-style" onchange="CalculateEstimate()" class="obj-select color-black" style="width: 175px;">
+          <option value="NaN" class="text-grey">(Select Style)</option>
+          <option value="15">Sketch</option>
+          <option value="25">Colored</option>
+        </select>
+      </div>
+
+      <div class="display-inline-block pad-4">
+        <label for="comm-framing" class="text-large text-bold">Framing</label><br>
+        <select id="comm-framing" onchange="CalculateEstimate()" class="obj-select color-black" style="width: 175px;">
+          <option value="NaN" class="text-grey">(Select Framing)</option>
+          <option value="1.0">Bust</option>
+          <option value="1.5">Halfbody</option>
+          <option value="2.0">3/4 Body</option>
+          <option value="2.5">Fullbody</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="align-center pad-16">
+      <span class="text-large">Estimated Price</span>
+      <br/>
+      <span id="comm-estimate" class="text-xxlarge text-bold">--</span>
+    </div>
+
     <p class="text-medium text-grey align-center">Base prices listed above are subject to change.</p>
+
     <div class="pad-8">
-    <details class="pad-8">
-      <summary class="text-xlarge obj-summary-btn align-center pad-large hover-opacity color-darkgrey">General Info</summary>
-      <div class="border-black pad-medium">
+      <details class="pad-8">
+        <summary class="text-xlarge obj-summary-btn align-center pad-large hover-opacity color-darkgrey">General Info</summary>
+        <div class="border-black pad-medium">
 
-        <ul class="obj-list text-large">
-          <li>Art a hobby for me. Commissions usually take a week or more to complete.</li>
-          <li>I accept payment through Paypal.</li>
-          <li>I am open to work with characters that lack clear reference(s).</li>
-          <li>I don't have a strict defined style and am willing to experiment with you should you wish. See below for examples.</li>
-          <li>I draw:
-            <ul class="obj-list line-height-1">
-              <li>Anthro characters.</li>
-              <li>Creatures.</li>
-              <li>Robots/mechs.</li>
-              <li>and more. <span class="text-grey">(if you don't see what you want, ask!)</span></li>
-            </ul>
-          </li>
-        </ul>
-        
-      </div>
-    </details>
+          <ul class="obj-list text-large">
+            <li>Art a hobby for me. Commissions usually take a week or more to complete.</li>
+            <li>I accept payment through Paypal.</li>
+            <li>I am open to work with characters that lack clear reference(s).</li>
+            <li>I don't have a strict defined style and am willing to experiment with you should you wish. See below for examples.</li>
+            <li>I draw:
+              <ul class="obj-list line-height-1">
+                <li>Anthro characters.</li>
+                <li>Creatures.</li>
+                <li>Robots/mechs.</li>
+                <li>and more. <span class="text-grey">(if you don't see what you want, ask!)</span></li>
+              </ul>
+            </li>
+          </ul>
+          
+        </div>
+      </details>
 
-    <details class="pad-8">
-      <summary class="text-xlarge obj-summary-btn align-center pad-large hover-opacity color-darkgrey">Terms</summary>
-      <div class="border-black pad-medium">
+      <details class="pad-8">
+        <summary class="text-xlarge obj-summary-btn align-center pad-large hover-opacity color-darkgrey">Terms</summary>
+        <div class="border-black pad-medium">
 
-        <ol class="obj-list text-large">
-          <li>Payment is done half upfront, and half before the final artwork is delivered.</li>
-          <li>Edits requests are allowed in the sketch phase, but are typically restricted after that.</li>
-          <li>
-            As artist, I hold the rights to the artwork. I may share it and work-in-progress(es) on this site as well as on other platforms.
-            <ul class="obj-list">
-              <li class="text-grey">Note: If you need to keep the artwork private, we can figure something out.</li>
-            </ul>
-          </li>
-          <li>
-            As client, you agree not to:
-            <ul class="obj-list">
-              <li>Take credit for the artwork, or republish it without credit.</li>
-              <li>Modify or trace the artwork without permission.</li>
-              <li>
-                Use the artwork for commercial purposes.<br/>
-                <span class="text-grey">(i.e. can't sell it, use it sell something, etc.)</span>
-              </li>
-              <li>Use the artwork to train, test or validate any generative AI program.</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-    </details>
-  </div>
+          <ol class="obj-list text-large">
+            <li>Payment is done half upfront, and half before the final artwork is delivered.</li>
+            <li>Edits requests are allowed in the sketch phase, but are typically restricted after that.</li>
+            <li>
+              As artist, I hold the rights to the artwork. I may share it and work-in-progress(es) on this site as well as on other platforms.
+              <ul class="obj-list">
+                <li class="text-grey">Note: If you need to keep the artwork private, we can figure something out.</li>
+              </ul>
+            </li>
+            <li>
+              As client, you agree not to:
+              <ul class="obj-list">
+                <li>Take credit for the artwork, or republish it without credit.</li>
+                <li>Modify or trace the artwork without permission.</li>
+                <li>
+                  Use the artwork for commercial purposes.<br/>
+                  <span class="text-grey">(i.e. can't sell it, use it sell something, etc.)</span>
+                </li>
+                <li>Use the artwork to train, test or validate any generative AI program.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </details>
+    </div>
     <hr>
   </div>
 
@@ -229,4 +259,22 @@
 
 </div>
 </body>
+<script>
+  const styleSelect = document.getElementById("comm-style");
+  const framingSelect = document.getElementById("comm-framing");
+  const estimateText = document.getElementById("comm-estimate");
+
+  // computes and displays estimated comm prices
+  function CalculateEstimate() {
+    let basePrice = Number(styleSelect.value);
+    let framingMult = Number(framingSelect.value);
+    
+    if (Number.isNaN(basePrice) || Number.isNaN(framingMult)) {
+      estimateText.textContent = "--";
+    }
+    else {
+      estimateText.textContent = (basePrice * framingMult).toFixed(2) + " $USD";
+    }
+  }
+</script>
 </html>
